@@ -4,7 +4,7 @@ escuderias=[]
 
 numeroEscuderias=0
 sumatoriaDeSalarios=0
-while(numeroEscuderias <= 2):
+while(numeroEscuderias < 2):
     escuderia = Escuderia()
     escuderia.nombre=input("Digita el nombre de la escuderia")
     escuderia.motor=input("digitel el motor de la escuderia ")
@@ -17,4 +17,5 @@ while(numeroEscuderias <= 2):
     numeroEscuderias+=1
 
 for escuderia in escuderias:
-    print(f"{escuderia.nombre}")
+    sumatoriaDeSalarios=sumatoriaDeSalarios+escuderia.piloto1.salarioAnual+escuderia.piloto2.salarioAnual
+print(f"la sumatoria del salario de los pilotos de la escuderia es: {sumatoriaDeSalarios}")
